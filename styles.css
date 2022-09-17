@@ -32,3 +32,7 @@ button{
     
     font-weight: bold;
 }
+#output-box{
+    padding: 1rem 1rem;
+    color: gainsboro;
+}

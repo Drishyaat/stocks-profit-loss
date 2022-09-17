@@ -10,33 +10,45 @@ function submitHandler()
     var ip=Number(initialPrice.value).toFixed(2);
     var qty=Number(stocksQuantity.value);
     var curr= Number(currentPrice.value).toFixed(2);
+    if(ip>0 && qty>0 && curr>0 )
+    {
     calculateProfitAndLoss(ip,qty,curr);
+    }
+    else{
+        showOutput("Entered values are Invalid");
+    }
 }
 
 function calculateProfitAndLoss(initial, quantity, current){
 if(initial>current)
 {
 //loss
+
 var loss=(initial-current)*quantity ;
 var lossPercentage=(loss/initial)*100;
-//outputBox.innerText="The loss is",loss;
-showOutput('The loss is ${loss} and loss percentage is ${lossPercentage}');
+
+ showOutput(`The loss is ${loss} and loss percentage is ${lossPercentage}%`);
 }
 else if(current> initial)
 {
 //profit
+
 var profit=(current-initial)*quantity;
 var profitPercentage=(profit/initial)*100; 
-showOutput( profit);
+
+showOutput( `The profit is ${profit} and profit percentage is ${profitPercentage}%`);
 }
-else
+else 
 {
 //rest 
-showOutput("No pain no gain and no gain no pain");
+
+ showOutput("No pain no gain and no gain no pain");
 }
+
 }
 
 function showOutput(message)  
 {
-    outputBox.innerHTML=message;
+    outputBox.innerText=message;
 }
+
