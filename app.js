@@ -24,7 +24,7 @@ if(initial>current)
 {
 //loss
 
-var loss=(initial-current)*quantity ;
+var loss=(initial-current)*quantity;
 var lossPercentage=(loss/initial)*100;
 
  showOutput(`The loss is ${loss} and loss percentage is ${lossPercentage}%`);
@@ -40,9 +40,8 @@ showOutput( `The profit is ${profit} and profit percentage is ${profitPercentage
 }
 else 
 {
-//rest 
-
- showOutput("No pain no gain and no gain no pain");
+//equal 
+showOutput("No pain no gain and no gain no pain");
 }
 
 }
